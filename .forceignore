@@ -10,3 +10,19 @@ package.xml
 
 # LWC Jest
 **/__tests__/**
+
+# Added as part of this Project
+
+# excluding
+src/main/default/appMenus/AppSwitcher.appMenu-meta.xml
+src/main/default/aura
+src/main/default/classes
+src/main/default/navigationMenus
+src/main/default/networkBraning
+src/main/default/networks
+src/main/default/pages
+src/main/default/profiles
+src/main/default/siteDotComSites
+src/main/default/sites
+src/main/default/staticresouces
+src/main/default/siteDotComSites
