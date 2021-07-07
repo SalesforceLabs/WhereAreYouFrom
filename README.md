@@ -1,5 +1,4 @@
-![ci status](https://github.com/CoreSEs/salesforce-where-are-you-from
-/actions/workflows/ci.yml/badge.svg?branch=master)
+![ci status](https://github.com/CoreSEs/salesforce-where-are-you-from/actions/workflows/ci.yml/badge.svg?branch=master)
 
 # What is Where are you from?
 
