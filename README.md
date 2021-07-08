@@ -1,3 +1,4 @@
+[![codecov](https://codecov.io/gh/CoreSEs/salesforce-where-are-you-from/branch/master/graph/badge.svg?token=H5MO99HT9L)](https://codecov.io/gh/CoreSEs/salesforce-where-are-you-from)
 ![ci status](https://github.com/CoreSEs/salesforce-where-are-you-from/actions/workflows/ci.yml/badge.svg?branch=master)
 
 # What is Where are you from?
