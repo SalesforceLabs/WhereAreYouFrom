@@ -29,19 +29,18 @@ export default class WhereAreYouFromCmp extends LightningElement {
 
       //checking if the users browser language equals the communites guest user language
       var usersBrowserLanguageEqualsCommunityLanguage =
-        usersBrowserLanguage.startsWith(communityDefaultLanguage);
+        usersBrowserLanguage == communityDefaultLanguage;
       var urlStringWithOutLanguage = currentCommunityURL.split("?");
 
       //Removing the country specification in browser language to only get the language parameter (first two characters) e.g. de-DE, de-AT or de-BE will result to de only
       var browserLanguageFirstTwoCharacters = usersBrowserLanguage.slice(0, 2);
 
-      //Building the new URL if browser language doesn't equal Community language
+      //Building the new URL
       var setCommunityURLToBrowserDefaultLanguage =
         urlStringWithOutLanguage[0] +
         "?language=" +
         browserLanguageFirstTwoCharacters;
-      /* browser session storage used as a static variable to allow users to manually
-      change language after the browser defaulted it initially */
+      // browser session storage used as a static variable to allow users to manually change language after the browser defaulted it initially and to prevent constant loop
       var componentLoadedSessionStorage =
         window.sessionStorage.getItem("componentLoaded");
 
