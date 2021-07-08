@@ -22,6 +22,7 @@ jobs:
       - name: "Upload code coverage for LWC to Codecov.io"
         uses: codecov/codecov-action@v1
         with:
+          token: ${{ secrets.CODECOV_TOKEN }}
           flags: LWC
       - name: Delete Scratch Org
         run: node_modules/sfdx-cli/bin/run force:org:delete --noprompt
