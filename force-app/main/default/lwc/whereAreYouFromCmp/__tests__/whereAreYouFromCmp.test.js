@@ -102,7 +102,7 @@ it("Test#4: Negative - don't change community language b/c session storage exist
   const element = createElement("c-whereAreYouFrom", {
     is: whereAreYouFrom
   });
-  window.sessionStorage.setItem("whereAreYouFromLoaded", true);
+  window.localStorage.setItem("whereAreYouFromLoaded", true);
 
   // browser language equals de_AT
   navigator.__defineGetter__("language", function () {
