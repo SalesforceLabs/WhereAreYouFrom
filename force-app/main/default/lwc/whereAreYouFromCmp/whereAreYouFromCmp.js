@@ -11,6 +11,7 @@ Last Updated: July 7th 2021
 // TO-DO: Check if browser and user language have more than two characters before slicing. This will ensure that always the iso code is being used
 //DONE: No need. We can use the slice method .slice(0,2) which will trim all characters after the second index for example en_US will result in en but en will stay en
 //TO-DO: Check if we can test community based logic via jest
+//TO-DO: Check if I need to check if browser allows session storage first
 
 export default class WhereAreYouFromCmp extends LightningElement {
   renderedCallback() {
@@ -41,8 +42,9 @@ export default class WhereAreYouFromCmp extends LightningElement {
         "?language=" +
         browserLanguageFirstTwoCharacters;
       // browser session storage used as a static variable to allow users to manually change language after the browser defaulted it initially and to prevent constant loop
-      var componentLoadedSessionStorage =
-        window.sessionStorage.getItem("componentLoaded");
+      var componentLoadedSessionStorage = window.sessionStorage.getItem(
+        "whereAreYouFromLoaded"
+      );
 
       //If the users browser language doesn't equal the default guest user pages language redirect user to new URL and set to browser language
       if (
@@ -52,7 +54,7 @@ export default class WhereAreYouFromCmp extends LightningElement {
         window.location.href = setCommunityURLToBrowserDefaultLanguage;
         /* sets the local storage to true which will prevent a constant reloading to browser
           language if user manually switched the language via the language selector */
-        window.sessionStorage.setItem("componentLoaded", true);
+        window.sessionStorage.setItem("whereAreYouFromLoaded", true);
       }
     } else {
       console.log(
