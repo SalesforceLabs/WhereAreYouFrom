@@ -36,7 +36,7 @@ export default class WhereAreYouFromCmp extends LightningElement {
         "?language=" +
         browserLanguageFirstTwoCharacters;
       // browser session storage used as a static variable to allow users to manually change language after the browser defaulted it initially and to prevent constant loop
-      var componentLoadedSessionStorage = window.localStorage.getItem(
+      var componentLoadedSessionStorage = window.sessionStorage.getItem(
         "whereAreYouFromLoaded"
       );
 
@@ -46,9 +46,9 @@ export default class WhereAreYouFromCmp extends LightningElement {
         !componentLoadedSessionStorage
       ) {
         window.location.href = setCommunityURLToBrowserDefaultLanguage;
-        /* sets the local storage to true which will prevent a constant reloading to browser
+        /* sets the session storage to true which will prevent a constant reloading to browser
           language if user manually switched the language via the language selector */
-        window.localStorage.setItem("whereAreYouFromLoaded", true);
+        window.sessionStorage.setItem("whereAreYouFromLoaded", true);
       }
     } else {
       console.log(
