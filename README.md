@@ -11,7 +11,7 @@ Where are you from is a Lightning Web Component (LWC) which detects a users defa
 
 Communities currently don't have browser language detection and guest/public users must manually change it via a picklist.
 
-## Team
+### Team
 
 ![Where are you from? Team](./img/Team.png "Team")
 
