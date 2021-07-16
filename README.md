@@ -1,4 +1,3 @@
-[![codecov](https://codecov.io/gh/CoreSEs/salesforce-where-are-you-from/branch/master/graph/badge.svg?token=H5MO99HT9L)](https://codecov.io/gh/CoreSEs/salesforce-where-are-you-from)
 ![ci status](https://github.com/CoreSEs/salesforce-where-are-you-from/actions/workflows/ci.yml/badge.svg?branch=master)
 
 # What is Where are you from?
@@ -41,6 +40,14 @@ This package can be install via following links
 
 ### Installing it via SFDX
 
+#### Package Based (Managed)
+
 ```shell
 sfdx force:package:install --package "04t4x000000AImoAAG" --wait 10 --publishwait 10
+```
+
+#### Pushing Open Source Code (Unmanaged)
+
+```shell
+sfdx force:source:push --forceoverwrite --loglevel fatal --wait 30
 ```
