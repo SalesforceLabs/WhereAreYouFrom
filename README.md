@@ -34,16 +34,16 @@ https://appexchange.salesforce.com/appxListingDetail?listingId=a0N4V00000HD5ckUA
 
 This package can be install via following links
 
-**_Production Orgs:_** https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4x000000AImoAAG
+**_Production Orgs:_** https://login.salesforce.com/packaging/installPackage.apexp?p0=04t4x000000AIp9AAG
 
-**_Sandbox Orgs:_** https://test.salesforce.com/packaging/installPackage.apexp?p0=04t4x000000AImoAAG
+**_Sandbox Orgs:_** https://test.salesforce.com/packaging/installPackage.apexp?p0=04t4x000000AIp9AAG
 
 ### Installing it via SFDX
 
 #### Package Based (Managed)
 
 ```shell
-sfdx force:package:install --package "04t4x000000AImoAAG" --wait 10 --publishwait 10
+sfdx force:package:install --package "04t4x000000AIp9AAG" --wait 10 --publishwait 10
 ```
 
 #### Pushing Open Source Code (Unmanaged)
